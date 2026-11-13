@@ -5,10 +5,12 @@ cleaned_df = df.copy()
 cleaned_df['date']=pandas.to_datetime(cleaned_df['date'], format="mixed")
 cleaned_df = cleaned_df.sort_values(by='date')
 
-duplicates = cleaned_df[cleaned_df.duplicated(subset=['date'], keep='first')]
+duplicates = cleaned_df[cleaned_df.duplicated(subset=['date'], keep=False)]
 print("Duplicated values:")
 print(duplicates)
 print()
+cleaned_df = cleaned_df.drop_duplicates(subset=["date"],keep="first")
+
 
 missing = cleaned_df.isnull().sum()
 #clean_df = cleaned_df.dropna(subset='close')

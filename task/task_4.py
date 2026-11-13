@@ -49,5 +49,4 @@ plt.scatter(comparison["market_return"]*100,comparison["daily_return"]*100, alph
 plt.title("Asset Return vs. Market Return")
 plt.xlabel("Market Return / %")
 plt.ylabel("Asset Return / %")
-plt.savefig("figures/figure4.png", dpi=300)
-plt.show()
+plt.savefig("figures/figure_4.png", dpi=300)
