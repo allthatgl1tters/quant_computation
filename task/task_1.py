@@ -1,5 +1,5 @@
 import pandas
-df = pandas.read_csv("week1_python_diagnostic_timeseries.csv")
+df = pandas.read_csv("data/week1_python_diagnostic_timeseries.csv")
 print("\n")
 print("Task 1")
 
