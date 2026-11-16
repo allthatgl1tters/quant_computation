@@ -1,5 +1,5 @@
 import pandas
-cleaned_df = pandas.read_csv("data/cleaned_data.csv")
+cleaned_df = pandas.read_csv("data/processed/cleaned_data.csv")
 
 cleaned_df['daily_return'] = cleaned_df['close'].pct_change(fill_method=None)
 
@@ -11,4 +11,4 @@ cleaned_df['market_return'] = cleaned_df['market_close'].pct_change(fill_method=
 
 cleaned_df["excess_return"] = (cleaned_df["daily_return"] - cleaned_df["market_return"])
 
-cleaned_df.to_csv("data/cleaned_data_edited.csv", index=False)
+cleaned_df.to_csv("data/processed/cleaned_data_edited.csv", index=False)

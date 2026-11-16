@@ -1,5 +1,5 @@
 import pandas
-df = pandas.read_csv("data/week1_python_diagnostic_timeseries.csv")
+df = pandas.read_csv("data/raw/week1_python_diagnostic_timeseries.csv")
 cleaned_df = df.copy()
 
 cleaned_df['date']=pandas.to_datetime(cleaned_df['date'], format="mixed")
@@ -34,4 +34,4 @@ print()
 cleaned_df["close_original"] = cleaned_df["close"]
 cleaned_df["is_abnormal"] = ((cleaned_df["close"] > cleaned_df["high"]) | (cleaned_df["close"] < cleaned_df["low"]))
 cleaned_df.loc[cleaned_df["is_abnormal"], "close"] = float("nan")
-cleaned_df.to_csv("data/cleaned_data.csv", index=False)
+cleaned_df.to_csv("data/processed/cleaned_data.csv", index=False)

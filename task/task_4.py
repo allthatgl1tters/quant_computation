@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from pathlib import Path
 
-data_file = Path("data/cleaned_data_edited.csv")
+data_file = Path("data/processed/cleaned_data_edited.csv")
 df = pandas.read_csv(data_file)
 Path("figures").mkdir(exist_ok=True)
 df["date"]=pandas.to_datetime(df["date"])
